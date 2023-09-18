@@ -6,8 +6,11 @@ import { StreamChat } from "stream-chat";
 import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import JoinGame from "./components/JoinGame";
+import Axios from "axios";
 
 function App() {
+  Axios.defaults.baseURL = "https://tictactoe-z3r6.onrender.com";
+  Axios.defaults.withCredentials = true;
   const cookies = new Cookies();
   const token = cookies.get("token");
   const client = StreamChat.getInstance(process.env.API_KEY);
