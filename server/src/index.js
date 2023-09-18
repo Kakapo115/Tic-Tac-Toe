@@ -11,7 +11,7 @@ import bcrypt from "bcrypt";
 const app = express();
 
 // Middlewares
-app.use(cors({ origin: "https://master--ricky-syme-tic-tac-toe.netlify.app/", credentials: true }));
+app.use(cors({ origin: "https://master--ricky-syme-tic-tac-toe.netlify.app", credentials: true }));
 app.use(express.json());
 
 const api_key = process.env.API_KEY;
