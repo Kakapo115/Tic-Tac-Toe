@@ -13,7 +13,7 @@ function App() {
   Axios.defaults.withCredentials = true;
   const cookies = new Cookies();
   const token = cookies.get("token");
-  const client = StreamChat.getInstance(process.env.API_KEY);
+  const client = StreamChat.getInstance(process.env.REACT_APP_API_KEY);
   const [isAuth, setIsAuth] = useState(false);
 
   const logOut = () => {
